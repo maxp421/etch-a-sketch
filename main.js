@@ -1,7 +1,6 @@
 "use strict";
-const DEFAULT_CANVAS_SIZE = 16;
-const DEFAULT_COLOR = "#000";
-
+const DEFAULT_CANVAS_SIZE = 40;
+const DEFAULT_COLOR = "#F02EAA";
 let currentColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_CANVAS_SIZE;
 
@@ -9,6 +8,7 @@ const canvas = document.querySelector("#canvas");
 const btnSize = document.querySelector("#btn--size");
 const btnColorPicker = document.querySelector("#colorPicker");
 btnColorPicker.value = DEFAULT_COLOR;
+console.log(btnColorPicker)
 const btnReset = document.querySelector("#btn--reset");
 
 canvas.addEventListener("mouseover", paint);
