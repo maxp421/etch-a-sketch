@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
-</head>
-<body>
-  <table id="canvas">
-    <img src="https://source.unsplash.com/random" alt="">
-  </table>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="settings">
+        <button id="btn--size" class="settings__btn">Canvas size</button>
+        <input type="color" id="colorPicker" class="settings__btn">
+        <button id="btn--rainbow" class="settings__btn">Rainbow</button>
+        <button id="btn--reset" class="settings__btn">
+          <img src="images/reset.svg" alt="reset" class="icon">
+        </button>
+      </div>
+      <table id="canvas"></table>
+    </div>
+
+    <dialog id="sizeDialog" class="btn__dialog">
+      <form name="sizeForm" method="dialog" class="modalForm">
+        <label for="size">Canvas size</label>
+        <input type="range" name="size" min="16" max="100" />
+        <p id="rangeValue"></p>
+        <div>
+          <input type="submit" name="ok" value="Ok" />
+          <input type="button" name="close" value="Close" />
+        </div>
+      </form>
+    </dialog>
+
+
+
+  </body>
 </html>
