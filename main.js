@@ -20,8 +20,6 @@ btnReset.addEventListener("click", () => {
   resetCanvas(currentSize);
 });
 
-//EFFECT ON HOVER - HIGHLIGHT TILE, add also circle and square/rectangle selection tools to draw with as in paint.
-
 function paint(e) {
   if (!e.currentTarget.contains(e.target)) return;
   if (e.target.tagName !== "TD") return;
@@ -30,7 +28,6 @@ function paint(e) {
   e.preventDefault();
 }
 
-// createCanvas can be default 16 size;
 function createCanvas(size) {
   for (let i = 0; i < size; i++) {
     let tr = document.createElement("tr");
@@ -52,6 +49,8 @@ function setCanvasSize() {
   const form = document.forms.sizeForm;
   const closeBtn = form.elements.close;
   const range = form.elements.size;
+  //always displays currentSize
+  range.value = currentSize;
   const rangeValue = form.querySelector("#rangeValue");
   rangeValue.textContent = range.value;
 

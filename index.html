@@ -10,6 +10,7 @@
 
   <body>
     <div class="container">
+      <h1 class="h1">Etch a sketch</h1>
       <div class="settings">
         <button id="btn--size" class="btn btn--m">Canvas size</button>
         <input type="color" id="colorPicker" class="btn btn--m">
@@ -21,10 +22,10 @@
       <table id="canvas"></table>
     </div>
 
-    <dialog id="sizeDialog" class="btn__dialog">
+    <dialog id="sizeDialog" class="dialog-prompt">
       <form name="sizeForm" method="dialog" class="modalForm">
         <label for="size">Canvas size</label>
-        <input type="range" name="size" min="16" max="100" />
+        <input type="range" name="size" min="16" max="100" value="40" />
         <p id="rangeValue"></p>
         <div>
           <input type="submit" name="ok" value="Ok" class="btn btn--s" />
