@@ -131,6 +131,7 @@ body{
   border-radius: 8px;
   max-height: 48px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .btn:hover{
   transform: translate(1px, -2px);
@@ -144,6 +145,13 @@ body{
 }
 .btn--s {
   padding: 4px 8px;
+}
+[data-active = "true"]{
+  /* box-shadow: rgba(240, 46, 170) 0px 3px 6px, rgba(240, 46, 170) 0px 3px 6px; */
+  /* border: solid 2px rgba(240, 46, 170); */
+  border: none;
+  box-shadow: rgba(240, 46, 170) 3px 3px 5px, rgba(240, 46, 170) -3px -3px 5px, rgba(240, 46, 170) 3px -3px 5px, rgba(240, 46, 170) -3px 3px 5px;
+
 }
 
 
@@ -174,3 +182,6 @@ body{
   height: 50px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+
+
