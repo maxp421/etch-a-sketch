@@ -101,11 +101,11 @@ body {
   align-items: center;
   padding-block: 15px;
   gap: 15px;
+  max-width: 96%;
 }
 @media (min-height: 800px) {
   .settings {
     width: 70vh;
-    max-width: 100%;
   }
 }
 .btn {
@@ -151,7 +151,7 @@ body {
 #canvas {
   border: none;
   width: 70vh;
-  max-width: 100%;
+  max-width: 96%;
   aspect-ratio: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-spacing: 0;
