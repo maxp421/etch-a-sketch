@@ -11,19 +11,21 @@
 </head>
 
 <body>
-  <div class="container">
+  <header>
     <h1 class="h1">Etch a sketch</h1>
+  </header>
+  <main class="container">
     <div class="settings">
       <input type="color" id="colorPicker" class="btn btn--m" />
-      <button id="btn--size" class="btn btn--m">Canvas size</button>
       <button id="btn--rainbow" class="btn btn--m">Rainbow</button>
       <button id="btn--darken" class="btn btn--m">Darken</button>
+      <button id="btn--size" class="btn btn--m">Canvas size</button>
       <button id="btn--reset" class="btn btn--m">
-        <img src="images/reset.svg" alt="reset" class="icon" />
+        <img src="images/reset.svg" alt="reset-button" class="icon" />
       </button>
     </div>
     <table id="canvas"></table>
-  </div>
+  </main>
 
   <dialog id="sizeDialog" class="dialog-prompt">
     <form name="sizeForm" method="dialog" class="modalForm">
@@ -40,12 +42,11 @@
   <footer class="footer">
     <span id="copyright"></span>
     <a href="https://github.com/maxp421/" target="_blank">
-      <i class="fa-brands fa-github fa-xl" style="color: #f02eaa"></i>
+      <i class="fa-brands fa-github fa-xl" style="color: #f02eaa" aria-hidden="true"></i>
     </a>
     <script>
-      document
-        .querySelector("#copyright")
-        .textContent = "Copyright © " + new Date().getFullYear() + " maxp421";
+      document.querySelector("#copyright").textContent =
+        "Copyright © " + new Date().getFullYear() + " maxp421";
     </script>
   </footer>
 </body>

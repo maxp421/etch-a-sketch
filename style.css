@@ -1,3 +1,6 @@
+:root {
+  --clr-primary: rgba(240, 46, 170);
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -64,67 +67,47 @@ h6 {
 
 body {
   font-family: Roboto, sans-serif;
+  margin-bottom: 100px;
 }
+
+/* Header */
 
 .h1 {
   font-size: 40px;
   text-align: center;
-  margin-bottom: 30px;
-  color: rgba(240, 46, 170);
+  color: var(--clr-primary);
+  padding-top: 15px;
 }
-
-#canvas {
-  border: none;
-  width: 98vw;
-  height: 98vw;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  border-spacing: 0;
-}
-@media (min-width: 700px) {
-  #canvas {
-    width: max(600px, 70vh);
-    height: max(600px, 70vh);
+@media (min-height: 860px) {
+  .h1 {
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
 }
-#canvas tr {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-#canvas td {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-#canvas td:hover {
-  outline: 2px solid black;
-}
 
+/* main */
 .container {
   display: flex;
-  width: 98vw;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4vh;
   margin-inline: auto;
-}
-@media (min-width: 700px) {
-  .container {
-    width: max(600px, 70vh);
-  }
 }
 
 .settings {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   padding-block: 15px;
-  width: 100%;
   gap: 15px;
 }
-
+@media (min-height: 800px) {
+  .settings {
+    width: 70vh;
+    max-width: 100%;
+  }
+}
 .btn {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -149,11 +132,42 @@ body {
   padding: 4px 8px;
 }
 [data-active="true"] {
-  /* box-shadow: rgba(240, 46, 170) 0px 3px 6px, rgba(240, 46, 170) 0px 3px 6px; */
-  /* border: solid 2px rgba(240, 46, 170); */
   border: none;
   box-shadow: rgba(240, 46, 170) 3px 3px 5px, rgba(240, 46, 170) -3px -3px 5px,
     rgba(240, 46, 170) 3px -3px 5px, rgba(240, 46, 170) -3px 3px 5px;
+}
+
+#colorPicker {
+  padding: 5px;
+  width: 80px;
+  height: 48px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.icon {
+  max-width: 24px;
+}
+
+#canvas {
+  border: none;
+  width: 70vh;
+  max-width: 100%;
+  aspect-ratio: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-spacing: 0;
+}
+#canvas tr {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#canvas td {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#canvas td:hover {
+  outline: 2px solid black;
 }
 
 .modalForm {
@@ -173,36 +187,20 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.icon {
-  max-width: 24px;
-}
-
-#colorPicker {
-  padding: 10px;
-  width: 80px;
-  height: 50px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
 /* Footer */
 
 .footer {
   display: flex;
   justify-content: center;
   gap: 10px;
-  position: absolute;
-  bottom: 20px;
   width: 100%;
+  margin-top: 50px;
 }
 
-.fa-github{
+.fa-github {
   transition: 0.3s ease-in;
 }
-.fa-github:hover{
+.fa-github:hover {
   scale: 130%;
   transform: translateY(-4px);
-}
-
-#copyright {
-
 }
