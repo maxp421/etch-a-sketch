@@ -118,10 +118,10 @@ function setCanvasSize() {
   //always displays currentSize
   range.value = currentSize;
   const rangeValue = form.querySelector("#rangeValue");
-  rangeValue.textContent = range.value;
+  rangeValue.textContent = range.value + "x" + range.value;
 
   range.oninput = () => {
-    rangeValue.textContent = range.value;
+    rangeValue.textContent = range.value + 'x' + range.value;
   };
 
   closeBtn.onclick = () => {

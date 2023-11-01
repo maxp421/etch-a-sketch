@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch a Sketch</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" type="module"></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <h1 class="h1">Etch a sketch</h1>
-      <div class="settings">
-        <input type="color" id="colorPicker" class="btn btn--m">
-        <button id="btn--size" class="btn btn--m">Canvas size</button>
-        <button id="btn--rainbow" class="btn btn--m">Rainbow</button>
-        <button id="btn--darken" class="btn btn--m">Darken</button>
-        <button id="btn--reset" class="btn btn--m">
-          <img src="images/reset.svg" alt="reset" class="icon">
-        </button>
-      </div>
-      <table id="canvas"></table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etch a Sketch</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/069b7249c1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="h1">Etch a sketch</h1>
+    <div class="settings">
+      <input type="color" id="colorPicker" class="btn btn--m" />
+      <button id="btn--size" class="btn btn--m">Canvas size</button>
+      <button id="btn--rainbow" class="btn btn--m">Rainbow</button>
+      <button id="btn--darken" class="btn btn--m">Darken</button>
+      <button id="btn--reset" class="btn btn--m">
+        <img src="images/reset.svg" alt="reset" class="icon" />
+      </button>
     </div>
+    <table id="canvas"></table>
+  </div>
 
-    <dialog id="sizeDialog" class="dialog-prompt">
-      <form name="sizeForm" method="dialog" class="modalForm">
-        <label for="size">Canvas size</label>
-        <input type="range" name="size" min="16" max="100" value="40" />
-        <p id="rangeValue"></p>
-        <div>
-          <input type="submit" name="ok" value="Ok" class="btn btn--s" />
-          <input type="button" name="close" value="Close" class="btn btn--s"/>
-        </div>
-      </form>
-    </dialog>
+  <dialog id="sizeDialog" class="dialog-prompt">
+    <form name="sizeForm" method="dialog" class="modalForm">
+      <label for="size">Canvas size</label>
+      <input type="range" name="size" min="16" max="100" value="40" />
+      <p id="rangeValue"></p>
+      <div>
+        <input type="submit" name="ok" value="Ok" class="btn btn--s" />
+        <input type="button" name="close" value="Close" class="btn btn--s" />
+      </div>
+    </form>
+  </dialog>
 
+  <footer class="footer">
+    <span id="copyright"></span>
+    <a href="https://github.com/maxp421/" target="_blank">
+      <i class="fa-brands fa-github fa-xl" style="color: #f02eaa"></i>
+    </a>
+    <script>
+      document
+        .querySelector("#copyright")
+        .textContent = "Copyright © " + new Date().getFullYear() + " maxp421";
+    </script>
+  </footer>
+</body>
 
-
-  </body>
 </html>

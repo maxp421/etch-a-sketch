@@ -62,11 +62,11 @@ h6 {
 }
 /*End of reset*/
 
-body{
+body {
   font-family: Roboto, sans-serif;
 }
 
-.h1{
+.h1 {
   font-size: 40px;
   text-align: center;
   margin-bottom: 30px;
@@ -133,27 +133,28 @@ body{
   transition: all 0.3s;
   cursor: pointer;
 }
-.btn:hover{
+.btn:hover {
   transform: translate(1px, -2px);
 }
-.btn:active{
+.btn:active {
   transition: 0.1s;
-  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
-.btn--m{
+.btn--m {
   padding: 10px 20px;
 }
 .btn--s {
   padding: 4px 8px;
 }
-[data-active = "true"]{
+[data-active="true"] {
   /* box-shadow: rgba(240, 46, 170) 0px 3px 6px, rgba(240, 46, 170) 0px 3px 6px; */
   /* border: solid 2px rgba(240, 46, 170); */
   border: none;
-  box-shadow: rgba(240, 46, 170) 3px 3px 5px, rgba(240, 46, 170) -3px -3px 5px, rgba(240, 46, 170) 3px -3px 5px, rgba(240, 46, 170) -3px 3px 5px;
-
+  box-shadow: rgba(240, 46, 170) 3px 3px 5px, rgba(240, 46, 170) -3px -3px 5px,
+    rgba(240, 46, 170) 3px -3px 5px, rgba(240, 46, 170) -3px 3px 5px;
 }
-
 
 .modalForm {
   display: flex;
@@ -183,5 +184,25 @@ body{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+/* Footer */
 
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
 
+.fa-github{
+  transition: 0.3s ease-in;
+}
+.fa-github:hover{
+  scale: 130%;
+  transform: translateY(-4px);
+}
+
+#copyright {
+
+}
