@@ -64,10 +64,11 @@ h6 {
   isolation: isolate;
 }
 /*End of reset*/
+html{
+}
 
 body {
   font-family: Roboto, sans-serif;
-  margin-bottom: 100px;
 }
 
 /* Header */
